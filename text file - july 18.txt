@@ -1,0 +1,65 @@
+Let the user enter :
+1) total courses taken
+2) tuition fees per course
+
+calculate and display total tuition fees considering discount.
+
+discount calculation rules:
+
+ if total fees > 50000 apply 20% discount 
+ if total fees > 25000 apply 10% discount
+ otherwise, no discount will be applicable. 
+---------------------------------------------------------------------------
+ function showFees ()  {
+   var courses = parseInt( document.getElementById('totalCourses').value ) ; 
+   var fees = parseInt (document.getElementById('feesPerCourse').value)  ;
+
+   var total = courses * fees; 
+   var discount ; 
+
+   if (total > 50000) {
+      discount = total * .20 ;
+   }
+  else if (total > 25000) {
+      discount = total * .10;
+  }
+  else {
+     discount = 0; 
+   }
+  var payable = total - discount; 
+  document.getElementById('show').innerText = "Total payable tuition fees: " + payable ; 
+
+  }
+
+---------------------------------------------
+  AND    &&  >>>>>        if (fees >5000 && sem > 4) { ..... }
+  OR    ||
+
+ let the user enter: 
+  1) Name
+  2) Courses Taken
+  3) Fees per courses
+  4) Current Semester No
+
+calculate and display total payable fees, including name and as per the following total fees
+calculation rules:
+
+
+    if total fees > 50000 and current semester no. > 5 apply 20% discount and 1000 taka library fees
+ if total fees > 25000 and current semester no. > 3 apply 10% discount and 800 taka library fees
+ if total fees > 10000 and current semester no. > 2 apply 5% discount and 500 taka library fees
+otherwise, no discount and fixed 2000 taka library fees will be applicable. 
+    
+
+
+
+
+
+
+
+
+
+
+
+ 
+
